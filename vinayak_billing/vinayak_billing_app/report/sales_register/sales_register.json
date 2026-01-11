@@ -1,0 +1,55 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2026-01-11 11:50:36.938730",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "label": " Invoice No",
+   "mandatory": 0,
+   "options": "Invoice",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 2,
+ "is_standard": "Yes",
+ "letter_head": null,
+ "modified": "2026-01-11 21:05:23.407625",
+ "modified_by": "Administrator",
+ "module": "Vinayak Billing App",
+ "name": "Sales Register",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\n    name AS \"Invoice No:Link/Invoice:140\",\n    posting_date AS \"Date:Date:100\",\n    customer AS \"Customer:Link/Customer:180\",\n    total AS \"Total:Currency:120\",\n    total_tax AS \"Tax:Currency:120\",\n    net_total AS \"Net Total:Currency:130\",\n    paid_amount AS \"Paid:Currency:120\",\n    outstanding_amount AS \"Outstanding:Currency:130\",\n    status AS \"Status:Data:120\"\nFROM `tabInvoice`\nWHERE docstatus = 1\n  AND posting_date BETWEEN %(from_date)s AND %(to_date)s\nORDER BY posting_date DESC;\n",
+ "ref_doctype": "Invoice",
+ "report_name": "Sales Register",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Billing App Admin"
+  }
+ ],
+ "timeout": 0
+}

@@ -1,0 +1,101 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"xHHDRPhGSG\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Vinayak Billing App</span>\",\"col\":12}},{\"id\":\"lbyZoY-R9x\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Masters</b></span>\",\"col\":12}},{\"id\":\"ZmC8ts40d5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Company\",\"col\":3}},{\"id\":\"zsivwCWl71\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"UOMs\",\"col\":3}},{\"id\":\"Rfh0h1kIeS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Items\",\"col\":3}},{\"id\":\"vcZqtDcv0z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"p-LaQ1InaI\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Transactions</b></span>\",\"col\":12}},{\"id\":\"1eq_VKob9W\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Invoice\",\"col\":4}},{\"id\":\"KRfrIsR4Xw\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Purchase\",\"col\":4}},{\"id\":\"X10_q6TVd5\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Payments\",\"col\":4}},{\"id\":\"7rhdErsBTo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"EBUu2iw5yH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales\",\"col\":3}},{\"id\":\"r4-3nKqyhp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Outstandings\",\"col\":3}},{\"id\":\"bf0SMO90Nw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"GST Summary\",\"col\":3}}]",
+ "creation": "2026-01-07 23:29:05.104199",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "expenses",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Vinayak Billing App",
+ "links": [],
+ "modified": "2026-01-11 20:23:50.895499",
+ "modified_by": "Administrator",
+ "module": "Vinayak Billing App",
+ "name": "Vinayak Billing App",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Invoice",
+   "label": "Invoice",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Purchase Invoice",
+   "label": "Purchase",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Payment Entry",
+   "label": "Payments",
+   "quick_list_filter": "[]"
+  }
+ ],
+ "roles": [],
+ "sequence_id": 28.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Sales",
+   "link_to": "Sales Register",
+   "report_ref_doctype": "Invoice",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Outstandings",
+   "link_to": "Outstanding Report",
+   "report_ref_doctype": "Invoice",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Customer",
+   "link_to": "Customer",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "GST Summary",
+   "link_to": "GST Summary Report",
+   "report_ref_doctype": "Invoice",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Company",
+   "link_to": "Company",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Items",
+   "link_to": "Item",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "UOMs",
+   "link_to": "UOM",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Vinayak Billing App"
+}

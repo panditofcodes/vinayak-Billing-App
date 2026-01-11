@@ -1,0 +1,241 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:INV-{#}",
+ "creation": "2026-01-08 01:43:41.478116",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ehfy",
+  "column_break_anaj",
+  "amended_from",
+  "company",
+  "customer",
+  "customer_name",
+  "posting_date",
+  "column_break_jkwy",
+  "company_address",
+  "customer_address",
+  "section_break_k9tu",
+  "items",
+  "total",
+  "section_break_rtda",
+  "column_break_b1x2",
+  "tax",
+  "total_tax",
+  "net_total",
+  "paid_amount",
+  "outstanding_amount",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ehfy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Invoice",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_tax",
+   "fieldtype": "Currency",
+   "label": "Total Tax",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Net Total",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Paid Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "options": "Draft\nUnpaid\nPaid\nPartially Paid\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax",
+   "fieldtype": "Table",
+   "label": "Tax",
+   "options": "Invoice GST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_address",
+   "fieldtype": "Small Text",
+   "label": "Company Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.address",
+   "fieldname": "customer_address",
+   "fieldtype": "Small Text",
+   "label": "Customer Address",
+   "read_only": 1
+  },
+  {
+   "default": "kfsk",
+   "fieldname": "column_break_anaj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_k9tu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_jkwy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_b1x2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rtda",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Invoice Item",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Payments",
+   "link_doctype": "Payment Entry",
+   "link_fieldname": "invoice"
+  }
+ ],
+ "modified": "2026-01-11 20:41:48.606529",
+ "modified_by": "Administrator",
+ "module": "Vinayak Billing App",
+ "name": "Invoice",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Billing App Admin",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Gray",
+   "title": "Draft"
+  },
+  {
+   "color": "Orange",
+   "title": "Unpaid"
+  },
+  {
+   "color": "Blue",
+   "title": "Partially Paid"
+  },
+  {
+   "color": "Green",
+   "title": "Paid"
+  },
+  {
+   "color": "Blue",
+   "title": "Cancelled"
+  }
+ ],
+ "track_changes": 1
+}
