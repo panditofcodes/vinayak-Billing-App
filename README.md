@@ -1,42 +1,22 @@
-### Vinayak Billing App
+# Vinayak Billing App
 
-An billing app for Vinayak Enterprise
+A custom billing and inventory management application built using the Frappe Framework.
 
-### Installation
+## Features
+- Sales Invoice with GST (CGST / SGST / IGST)
+- Purchase Invoice & Opening Stock
+- Stock Ledger based inventory
+- Payment Entry & Outstanding tracking
+- Sales Register, GST Summary & Outstanding Reports
+- Custom Workspace & UI
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+## Tech Stack
+- Frappe Framework v15
+- MariaDB
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app vinayak_billing
-```
+## Status
+Initial working version (v0.1.0)
 
-### Contributing
+## Author
+Piyush Shukla
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
-
-```bash
-cd apps/vinayak_billing
-pre-commit install
-```
-
-Pre-commit is configured to use the following tools for checking and formatting your code:
-
-- ruff
-- eslint
-- prettier
-- pyupgrade
-
-### CI
-
-This app can use GitHub Actions for CI. The following workflows are configured:
-
-- CI: Installs this app and runs unit tests on every push to `develop` branch.
-- Linters: Runs [Frappe Semgrep Rules](https://github.com/frappe/semgrep-rules) and [pip-audit](https://pypi.org/project/pip-audit/) on every pull request.
-
-
-### License
-
-mit
-# vinayak-Billing-App
